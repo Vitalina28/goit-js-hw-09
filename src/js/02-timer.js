@@ -98,15 +98,12 @@ function onClick() {
 
     const { days, hours, minutes, seconds } = convertMs(timeDifferent);
 
-    const dayEl = day.textContent = addLeadingZero(days);
-    const hourEl = hour.textContent= addLeadingZero(hours);
-    const minuteEl = minute.textContent = addLeadingZero(minutes);
-    const secondEl = second.textContent = addLeadingZero(seconds);
+    day.textContent = addLeadingZero(days);
+    hour.textContent= addLeadingZero(hours);
+    minute.textContent = addLeadingZero(minutes);
+    second.textContent = addLeadingZero(seconds);
   }, 1000);
 }
 
-function formatTime(days, hours, minutes, seconds) {
-  return `${days} ${hours}  ${minutes}  ${seconds}`;
-};
 
   
