@@ -12,8 +12,6 @@ const second = document.querySelector('[data-seconds]');
 const fields = document.querySelectorAll('.field');
 const timeItem = document.querySelectorAll('.value');
 
-
-
 timer.style.display = "flex";
 
 fields.forEach(({ style }) => {
@@ -97,5 +95,3 @@ function onClick() {
     second.textContent = addLeadingZero(seconds);
   }, 1000);
 }
-
-console.log('run');
