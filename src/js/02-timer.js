@@ -98,3 +98,4 @@ function onClick() {
   }, 1000);
 }
 
+console.log('run');
