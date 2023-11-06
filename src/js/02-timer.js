@@ -16,22 +16,15 @@ const timeItem = document.querySelectorAll('.value');
 
 timer.style.display = "flex";
 
-for (let i = 0; i < fields.length; i += 1) {
-    // column[i].style = {
-    //     ...column[i].style,
-    //     display: 'flex',
-    //     flexDirection: 'column',
-    //     textTransform: 'center',
-    //     fontSize: '12px',
-    //     marginRight: '10px'
-    // }
-  fields[i].style.display = 'flex';
-  fields[i].style.flexDirection = 'column';
-  fields[i].style.textTransform = 'uppercase';
-  fields[i].style.textAlign = 'center';
-  fields[i].style.fontSize = '12px';
-  fields[i].style.marginRight = '10px';
-}
+fields.forEach(({ style }) => {
+  style.display = 'flex';
+  style.flexDirection = 'column';
+  style.textTransform = 'uppercase';
+  style.textAlign = 'center';
+  style.fontSize = '12px';
+  style.marginRight = '10px';
+})
+ 
 
 for (let i = 0; i < timeItem.length; i += 1){
   timeItem[i].style.fontSize = '30px';
@@ -105,5 +98,3 @@ function onClick() {
   }, 1000);
 }
 
-
-  
