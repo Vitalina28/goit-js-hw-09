@@ -77,15 +77,18 @@ function addLeadingZero(value) {
 
 
 function onClick() {
-    const endDate = new Date(datePicker.value);
+  
+  const endDate = new Date(datePicker.value);
   const timeId = setInterval(() => {
-    const currentDate = new Date();
-    const timeDifferent = endDate - currentDate;
+  const currentDate = new Date();
+  const timeDifferent = endDate - currentDate;
+    
+  startBtn.setAttribute("disabled", true);
 
     if (timeDifferent <= 0) {
       clearInterval(timeId);
       return;
-    }
+    } 
 
     const { days, hours, minutes, seconds } = convertMs(timeDifferent);
 
@@ -93,5 +96,6 @@ function onClick() {
     hour.textContent= addLeadingZero(hours);
     minute.textContent = addLeadingZero(minutes);
     second.textContent = addLeadingZero(seconds);
+  
   }, 1000);
 }
